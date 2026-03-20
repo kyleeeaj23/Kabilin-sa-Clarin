@@ -1,6 +1,7 @@
-import { createClient } from '@supabase/supabase-js'; // Ensure this matches exactly
+import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = 'https://effopesshpxiluewfnbg.supabase.co';
-const supabaseAnonKey = 'sb_publishable_X35iwgM9CWyZMIPhqcDc0A_KbInpfnu';
+// This tells the app to look for the keys in Vercel's settings
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase = createClient(supabaseUrl, supabaseAnonKey)
