@@ -131,10 +131,24 @@ function App() {
   };
 
   const fetchSites = useCallback(async () => {
-    const { data, error } = await supabase.from('heritage_sites').select('*');
-    if (!error) setHeritageSites(data);
-    else console.error("Error fetching sites:", error);
-  }, []);
+  try {
+    // 🟢 Talk directly to Supabase instead of a broken Vercel link!
+    const { data, error } = await supabase
+      .from('heritage_sites')
+      .select('*');
+      
+    if (error) {
+      console.error("Error fetching sites:", error.message);
+      return;
+    }
+    
+    if (data) {
+      setHeritageSites(data);
+    }
+  } catch (err) {
+    console.error("Critical error during fetch:", err);
+  }
+}, []);
 
   const fetchReportQueue = useCallback(async () => {
     const { data, error } = await supabase.from('heritage_reports').select('*, heritage_sites(Name)');
