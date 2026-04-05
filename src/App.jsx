@@ -3,7 +3,7 @@ import { supabase } from './supabaseClient';
 import './style.css';
 import backgroundVideo from './assets/FINAL_BACKGROUND.mp4';
 import aboutContent from './assets/ABOUT_CONTENT.png';
-import mainScreenImg from './assets/main_screen.png';
+import mainScreenImg from './assets/2NDPAGE.jpg';
 
 // NEW ASSET IMPORTS
 import backgroundofwhite from './assets/Backgroundofwhite.png';
@@ -758,15 +758,15 @@ function App() {
           <video src={backgroundVideo} autoPlay loop muted playsInline style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: 1, top: 0, left: 0 }} />
           <div style={{ position: 'absolute', width: '100%', height: '100%', backgroundImage: `url(${backgroundofwhite})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'rgba(0, 0, 0, 0.65)', backgroundBlendMode: 'overlay', zIndex: 2, top: 0, left: 0, opacity: 0.1 }} />
           <div style={{ position: 'absolute', width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.55)', zIndex: 2, top: 0, left: 0 }} />
-
+          
           <div style={{ position: 'relative', zIndex: 3, width: '100%', height: '100%', display: 'flex', alignItems: 'center' }}>
             {!selectedSite ? (
               <div style={{ padding: '0 5%', width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center', animation: 'fadeIn 0.5s ease', gap: '40px', boxSizing: 'border-box' }}>
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', maxWidth: '40%' }}>
                   <button style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', alignSelf: 'flex-start', marginBottom: '20px', fontSize: '16px'}}
                   onClick={() => handleNavigationWithFact(() => setCurrentScreen('home'))}> ← Back to Home</button>
-                  <h1 style={{ fontSize: '50px', fontWeight: '600', margin: '0 0 10px 0', fontFamily: "'Garet', sans-serif", color: '#fff', textAlign: 'center' }}>Kabilin sa</h1>
-                  <h1 style={{ fontSize: '50px', fontWeight: '600', margin: '0 0 20px 0', fontFamily: "'Garet', sans-serif", color: '#fff', textAlign: 'center' }}>Clarin</h1>
+                  <h1 style={{ fontSize: '50px', fontWeight: '600', margin: '0 0 10px 0', fontFamily: "'Garet', sans-serif", color: '#fff', textAlign: 'right' , marginLeft: '-200px'}}>Kabilin sa</h1>
+                  <h1 style={{ fontSize: '50px', fontWeight: '600', margin: '0 0 20px 0', fontFamily: "'Garet', sans-serif", color: '#fff', textAlign: 'right' , marginLeft: '-300px'}}>Clarin</h1>
                   <div style={{ width: '85%', height: '240px', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.3)' }}>
                     <img src={mainScreenImg} alt="Main Screen" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
