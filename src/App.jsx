@@ -6,7 +6,7 @@ import aboutContent from './assets/ABOUT_CONTENT.png';
 import mainScreenImg from './assets/main_screen.png';
 
 // NEW ASSET IMPORTS
-import backgroundofwhite from './assets/backgroundofwhite.png';
+import backgroundofwhite from './assets/Backgroundofwhite.png';
 import sugong1 from './assets/Sugong1.jfif';
 import sugong2 from './assets/Sugong2.jfif';
 import saint1 from './assets/Saint1.jfif';
